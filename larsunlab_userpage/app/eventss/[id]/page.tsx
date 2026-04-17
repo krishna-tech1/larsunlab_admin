@@ -170,7 +170,9 @@ export default function EventDetailPage({ params }: { params: Promise<{ id: stri
                 </div>
                 <div>
                   <p className="text-[10px] uppercase tracking-widest font-black text-gray-400 mb-0.5">Event Date</p>
-                  <p className="font-bold text-[#2b1e70]">{event.date}</p>
+                  <p className="font-bold text-[#2b1e70]">
+                    {event.endDate ? `${event.date} - ${event.endDate}` : event.date}
+                  </p>
                 </div>
               </div>
 

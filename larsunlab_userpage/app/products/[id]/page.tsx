@@ -4,7 +4,7 @@ import { useState, useEffect, use } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Package, ArrowLeft, ShieldCheck, Zap, Beaker, MessageSquare } from "lucide-react";
+import { ChevronLeft, ChevronRight, Package, ArrowLeft, ShieldCheck, Zap, Beaker } from "lucide-react";
 
 const Footer = () => (
   <footer id="footer" className="bg-gray-50 pt-24 pb-12 px-6 sm:px-8">
@@ -91,9 +91,6 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
             <span className="sm:hidden">Back</span>
           </Link>
           <div className="flex gap-4">
-            <div className="hidden sm:flex items-center gap-2 text-xs font-black text-gray-400 uppercase tracking-widest bg-gray-50 px-5 py-2.5 rounded-2xl border border-gray-100">
-              <ShieldCheck size={14} className="text-green-500" /> Clinical Quality Certified
-            </div>
           </div>
         </div>
       </nav>
@@ -153,29 +150,9 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
 
             <h1 className="text-4xl lg:text-6xl font-black text-[#2b1e70] leading-[1.1] mb-8 break-words">{product.name}</h1>
 
-            <div className="bg-gray-50 rounded-[32px] p-6 lg:p-8 border border-gray-100 mb-10 space-y-6">
-              <div className="pt-6 border-t border-gray-200">
-                <div className="flex flex-col gap-1">
-                  <span className="text-[10px] items-center flex gap-2 font-black text-gray-400 uppercase tracking-widest"><Beaker size={12} className="text-orange-500" /> Molecular ID</span>
-                  <span className="text-sm font-bold text-[#2b1e70]">LXP-{id.slice(-6).toUpperCase()}</span>
-                </div>
-              </div>
-            </div>
 
-            <div className="mt-auto flex flex-col sm:flex-row gap-4 pt-10 border-t border-gray-50">
-              <button
-                onClick={() => document.getElementById("footer")?.scrollIntoView({ behavior: "smooth" })}
-                className="flex-1 py-5 bg-[#2b1e70] text-white rounded-3xl font-black text-xs uppercase tracking-widest shadow-xl hover:scale-[1.03] transition-all"
-              >
-                Request Quotation
-              </button>
-              <button
-                onClick={() => window.open(`https://wa.me/8248592553?text=Hi, I am interested in ${product.name}`, "_blank")}
-                className="flex-1 py-5 bg-white border-2 border-gray-100 text-[#2b1e70] rounded-3xl font-black text-xs uppercase tracking-widest hover:border-[#2b1e70] transition-all flex items-center justify-center gap-2"
-              >
-                <MessageSquare size={16} /> Technical Inquiry
-              </button>
-            </div>
+
+
           </div>
         </div>
         {/* FULL WIDTH DATA SHEET */}

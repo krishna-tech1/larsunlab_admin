@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import EventCollaboration from "@/app/eventss/EventCollaboration";
+
 
 const categories = ["All Events", "Conference", "Exhibition", "Internal"];
 
@@ -103,7 +103,7 @@ export default function EventsPage() {
                   {/* CONTENT - BELOW IMAGE */}
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="flex justify-between items-center text-[11px] font-bold text-orange-500 uppercase tracking-widest mb-2">
-                       {item.date}
+                     {item.endDate ? `${item.date} - ${item.endDate}` : item.date}
                     </div>
 
                     <h3 className="text-[#2b1e70] font-bold text-xl leading-tight mb-4 group-hover:text-orange-500 transition-colors">
@@ -121,7 +121,7 @@ export default function EventsPage() {
         </div>
       </section>
 
-      <EventCollaboration />
+
     </>
   );
 }

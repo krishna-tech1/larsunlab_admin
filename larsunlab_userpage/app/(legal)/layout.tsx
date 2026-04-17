@@ -30,19 +30,7 @@ export default function LegalLayout({
           {children}
         </div>
 
-        {/* Support Section */}
-        <div className="mt-12 bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center">
-          <h2 className="text-xl font-semibold mb-2">Have questions?</h2>
-          <p className="text-gray-600 mb-6">
-            If you need further clarification regarding our policies or compliance standards, our legal team is here to help.
-          </p>
-          <a
-            href="mailto:muthukrishnan8733@gmail.com"
-            className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#2b1e70] hover:bg-[#1a1240] transition"
-          >
-            Contact Legal Department
-          </a>
-        </div>
+
       </div>
     </main>
   );

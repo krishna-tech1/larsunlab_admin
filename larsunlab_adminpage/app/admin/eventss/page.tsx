@@ -36,6 +36,7 @@ export default function EventsPage() {
     description: "",
     location: "",
     date: "",
+    endDate: "",
     type: "Conference",
   });
   const [selectedImages, setSelectedImages] = useState<File[]>([]);
@@ -114,6 +115,14 @@ export default function EventsPage() {
       formData.append("description", form.description);
       formData.append("location", form.location);
       formData.append("date", form.date);
+      if (form.endDate) {
+        if (new Date(form.endDate) < new Date(form.date)) {
+          toast.error("End date cannot be earlier than start date");
+          setLoading(false);
+          return;
+        }
+        formData.append("endDate", form.endDate);
+      }
       formData.append("type", form.type);
 
       selectedImages.forEach((file) => {
@@ -158,6 +167,7 @@ export default function EventsPage() {
       description: "",
       location: "",
       date: "",
+      endDate: "",
       type: "Conference",
     });
     setSelectedImages([]);
@@ -174,6 +184,7 @@ export default function EventsPage() {
       description: event.description || "",
       location: event.location,
       date: event.date,
+      endDate: event.endDate || "",
       type: event.type,
     });
     setExistingImages(event.images || []);
@@ -390,7 +401,7 @@ export default function EventsPage() {
                   </p>
                   <p className="flex items-center gap-2">
                     <Calendar size={14} className="text-orange-500" />
-                    {e.date}
+                    {e.endDate ? `${e.date} - ${e.endDate}` : e.date}
                   </p>
                 </div>
 
@@ -527,13 +538,26 @@ export default function EventsPage() {
                     </div>
 
                     <div>
-                      <label className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2 block ml-1">Event Date</label>
+                      <label className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2 block ml-1">Start Date</label>
                       <div className="relative">
                         <Calendar size={16} className="absolute left-4 top-4 text-orange-500" />
                         <input
                           type="date"
                           value={form.date}
                           onChange={(e) => setForm({ ...form, date: e.target.value })}
+                          className="w-full pl-12 pr-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold focus:ring-2 focus:ring-[#2B176F]/20 outline-none transition-all"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2 block ml-1">End Date (Optional)</label>
+                      <div className="relative">
+                        <Calendar size={16} className="absolute left-4 top-4 text-orange-500" />
+                        <input
+                          type="date"
+                          value={form.endDate}
+                          onChange={(e) => setForm({ ...form, endDate: e.target.value })}
                           className="w-full pl-12 pr-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold focus:ring-2 focus:ring-[#2B176F]/20 outline-none transition-all"
                         />
                       </div>
