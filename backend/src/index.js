@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import helmet from 'helmet';
+import multer from 'multer';
 import testRoutes from './routes/testRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 import distributorRoutes from './routes/distributorRoutes.js';
@@ -45,6 +46,17 @@ app.get('/health', (req, res) => {
 
 // Error handling middleware
 app.use((err, req, res, next) => {
+  if (err instanceof multer.MulterError) {
+    if (err.code === 'LIMIT_FILE_SIZE') {
+      return res.status(400).json({ error: 'File size is too large. Max limit is 10MB per image.' });
+    }
+    return res.status(400).json({ error: err.message });
+  }
+  
+  if (err.message === 'Only images are allowed!' || err.message === 'Invalid file type. Please upload PDF, DOC, or TXT.') {
+    return res.status(400).json({ error: err.message });
+  }
+
   console.error(err.stack);
   res.status(500).json({ error: 'Something went wrong!' });
 });
