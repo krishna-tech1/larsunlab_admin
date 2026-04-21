@@ -518,7 +518,7 @@ export default function ProductsPage() {
                         value={form.name}
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
                         placeholder="e.g. Cardiopress XL 50mg"
-                        maxLength={25}
+                        maxLength={500}
                         className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-[#2B176F]/20 outline-none transition-all placeholder:font-medium placeholder:text-gray-400"
                       />
                     </div>
@@ -529,7 +529,7 @@ export default function ProductsPage() {
                         value={form.packSize}
                         onChange={(e) => setForm({ ...form, packSize: e.target.value })}
                         placeholder="e.g. 10x10 Tablets"
-                        maxLength={25}
+                        maxLength={500}
                         className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-[#2B176F]/20 outline-none transition-all placeholder:font-medium placeholder:text-gray-400"
                       />
                     </div>
@@ -562,7 +562,7 @@ export default function ProductsPage() {
                         value={form.dosage}
                         onChange={(e) => setForm({ ...form, dosage: e.target.value })}
                         placeholder="Administration details..."
-                        maxLength={350}
+                        maxLength={5000}
                         className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-[#2B176F]/20 outline-none resize-none placeholder:text-gray-400"
                         rows={2}
                       />
@@ -574,7 +574,7 @@ export default function ProductsPage() {
                         value={form.modeOfAction}
                         onChange={(e) => setForm({ ...form, modeOfAction: e.target.value })}
                         placeholder="How the molecule interacts..."
-                        maxLength={350}
+                        maxLength={5000}
                         className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-[#2B176F]/20 outline-none resize-none placeholder:text-gray-400"
                         rows={2}
                       />
@@ -586,7 +586,7 @@ export default function ProductsPage() {
                         value={form.indication}
                         onChange={(e) => setForm({ ...form, indication: e.target.value })}
                         placeholder="What conditions is this for?"
-                        maxLength={350}
+                        maxLength={5000}
                         className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-[#2B176F]/20 outline-none resize-none placeholder:text-gray-400"
                         rows={2}
                       />
@@ -607,7 +607,7 @@ export default function ProductsPage() {
                         value={form.usageInstruction}
                         onChange={(e) => setForm({ ...form, usageInstruction: e.target.value })}
                         placeholder="Steps for patient use..."
-                        maxLength={350}
+                        maxLength={5000}
                         className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-[#2B176F]/20 outline-none resize-none placeholder:text-gray-400"
                         rows={2}
                       />
@@ -619,7 +619,7 @@ export default function ProductsPage() {
                         value={form.precautions}
                         onChange={(e) => setForm({ ...form, precautions: e.target.value })}
                         placeholder="Warnings and risks..."
-                        maxLength={350}
+                        maxLength={5000}
                         className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-[#2B176F]/20 outline-none resize-none placeholder:text-gray-400"
                         rows={2}
                       />
@@ -631,7 +631,7 @@ export default function ProductsPage() {
                         value={form.storage}
                         onChange={(e) => setForm({ ...form, storage: e.target.value })}
                         placeholder="Temperature and environmental needs..."
-                        maxLength={200}
+                        maxLength={5000}
                         className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-[#2B176F]/20 outline-none resize-none placeholder:text-gray-400"
                         rows={2}
                       />
@@ -643,7 +643,7 @@ export default function ProductsPage() {
                         value={form.disclaimer}
                         onChange={(e) => setForm({ ...form, disclaimer: e.target.value })}
                         placeholder="Legal/medical disclaimer..."
-                        maxLength={350}
+                        maxLength={5000}
                         className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-[#2B176F]/20 outline-none resize-none italic placeholder:text-gray-400"
                         rows={2}
                       />
@@ -663,7 +663,7 @@ export default function ProductsPage() {
                       value={form.description}
                       onChange={(e) => setForm({ ...form, description: e.target.value })}
                       placeholder="Detailed synthesis breakthroughs for public catalog..."
-                      maxLength={400}
+                      maxLength={5000}
                       className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-[#2B176F]/20 outline-none resize-none min-h-[100px] placeholder:text-gray-400"
                       rows={3}
                     />

@@ -435,7 +435,7 @@ export default function CareersPage() {
                   <label className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2 block ml-1">Job Name / Title</label>
                   <input
                     value={form.title}
-                    maxLength={25}
+                    maxLength={500}
                     onChange={(e) => setForm({ ...form, title: e.target.value })}
                     placeholder="e.g. Senior Medical Consultant"
                     className={`w-full px-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-[#2B176F]/20 outline-none transition-all placeholder:font-medium placeholder:text-gray-400 ${
@@ -450,7 +450,7 @@ export default function CareersPage() {
                     <label className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2 block ml-1">Experience</label>
                     <input
                       value={form.exp}
-                      maxLength={20}
+                      maxLength={500}
                       onChange={(e) => setForm({ ...form, exp: e.target.value })}
                       placeholder="e.g. 5+ Years"
                       className={`w-full px-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-[#2B176F]/20 outline-none transition-all placeholder:text-gray-400 ${
@@ -464,7 +464,7 @@ export default function CareersPage() {
                     <label className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2 block ml-1">Location</label>
                     <input
                       value={form.location}
-                      maxLength={20}
+                      maxLength={500}
                       onChange={(e) => setForm({ ...form, location: e.target.value })}
                       placeholder="e.g. Remote"
                       className={`w-full px-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-[#2B176F]/20 outline-none transition-all placeholder:text-gray-400 ${

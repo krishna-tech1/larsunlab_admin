@@ -348,13 +348,13 @@ export default function DistributorsPage() {
                     <label className="text-xs font-bold text-[#2B176F] uppercase tracking-wider">
                       District (Region)
                     </label>
-                    <span className={`text-[10px] ${form.region.length === 15 ? 'text-red-500 font-bold' : 'text-gray-400'}`}>
-                      {form.region.length}/15
+                    <span className={`text-[10px] ${form.region.length === 500 ? 'text-red-500 font-bold' : 'text-gray-400'}`}>
+                      {form.region.length}/500
                     </span>
                   </div>
                   <div className="relative">
                     <input
-                      maxLength={15}
+                      maxLength={500}
                       placeholder="e.g., Chennai"
                       value={form.region}
                       className="w-full px-4 py-3 bg-[#F3F4F6] border-none rounded-xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-orange-400 outline-none pr-16 placeholder:text-gray-400"
@@ -373,12 +373,12 @@ export default function DistributorsPage() {
                       <label className="text-xs font-bold text-[#2B176F] uppercase tracking-wider">
                         Company Name
                       </label>
-                      <span className={`text-[10px] ${form.name.length === 20 ? 'text-red-500 font-bold' : 'text-gray-400'}`}>
-                        {form.name.length}/20
+                      <span className={`text-[10px] ${form.name.length === 500 ? 'text-red-500 font-bold' : 'text-gray-400'}`}>
+                        {form.name.length}/500
                       </span>
                     </div>
                     <input
-                      maxLength={20}
+                      maxLength={500}
                       placeholder="e.g., Vinayaka Pharma"
                       value={form.name}
                       className="w-full px-4 py-3 bg-[#F3F4F6] border-none rounded-xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-orange-400 outline-none placeholder:text-gray-400"

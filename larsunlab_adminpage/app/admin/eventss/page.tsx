@@ -514,13 +514,13 @@ export default function EventsPage() {
                     <div className="col-span-1 md:col-span-2">
                       <div className="flex justify-between items-center mb-2 ml-1">
                         <label className="text-[11px] font-bold text-gray-400 uppercase tracking-wider block">Event Title</label>
-                        <span className={`text-[9px] font-black ${form.title.length >= 70 ? 'text-red-500' : 'text-gray-400'}`}>
-                          {form.title.length}/70
+                        <span className={`text-[9px] font-black ${form.title.length >= 500 ? 'text-red-500' : 'text-gray-400'}`}>
+                          {form.title.length}/500
                         </span>
                       </div>
                       <input
                         value={form.title}
-                        maxLength={70}
+                        maxLength={500}
                         onChange={(e) => setForm({ ...form, title: e.target.value })}
                         placeholder="e.g. Molecular Frontiers 2024"
                         className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-[#2B176F]/20 outline-none transition-all placeholder:font-medium placeholder:text-gray-400"
@@ -530,15 +530,15 @@ export default function EventsPage() {
                     <div>
                       <div className="flex justify-between items-center mb-2 ml-1">
                         <label className="text-[11px] font-bold text-gray-400 uppercase tracking-wider block">Regional Location</label>
-                        <span className={`text-[9px] font-black ${form.location.length >= 40 ? 'text-red-500' : 'text-gray-400'}`}>
-                          {form.location.length}/40
+                        <span className={`text-[9px] font-black ${form.location.length >= 500 ? 'text-red-500' : 'text-gray-400'}`}>
+                          {form.location.length}/500
                         </span>
                       </div>
                       <div className="relative">
                         <MapPin size={16} className="absolute left-4 top-4 text-orange-500" />
                         <input
                           value={form.location}
-                          maxLength={40}
+                          maxLength={500}
                           onChange={(e) => setForm({ ...form, location: e.target.value })}
                           placeholder="e.g. Trichy Hub"
                           className="w-full pl-12 pr-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-[#2B176F]/20 outline-none transition-all placeholder:text-gray-400"
@@ -592,13 +592,13 @@ export default function EventsPage() {
                   <div className="col-span-1 md:col-span-2">
                     <div className="flex justify-between items-center mb-2 ml-1">
                       <label className="text-[11px] font-bold text-gray-400 uppercase tracking-wider block">Event Essence (Description)</label>
-                      <span className={`text-[9px] font-black ${form.description.length >= 1000 ? 'text-red-500' : 'text-gray-400'}`}>
-                        {form.description.length}/1000
+                      <span className={`text-[9px] font-black ${form.description.length >= 5000 ? 'text-red-500' : 'text-gray-400'}`}>
+                        {form.description.length}/5000
                       </span>
                     </div>
                     <textarea
                       value={form.description}
-                      maxLength={1000}
+                      maxLength={5000}
                       onChange={(e) => setForm({ ...form, description: e.target.value })}
                       placeholder="Highlight the clinical breakthroughs being presented..."
                       className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl text-sm font-bold text-[#2B176F] focus:ring-2 focus:ring-[#2B176F]/20 outline-none resize-none min-h-[100px] whitespace-pre-wrap placeholder:text-gray-400"
